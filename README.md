@@ -1,12 +1,12 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Node_auths" />
+  <img src="./.github/app.gif" alt="node_auths" />
 
   &#xa0;
 
   <!-- <a href="https://node_auths.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Node_auths</h1>
+<h1 align="center">node_auths</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/alissoncavalcanticma/node_auths?color=56BEB8">
@@ -17,24 +17,10 @@
 
   <img alt="License" src="https://img.shields.io/github/license/alissoncavalcanticma/node_auths?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/alissoncavalcanticma/node_auths?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/alissoncavalcanticma/node_auths?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/alissoncavalcanticma/node_auths?color=56BEB8" /> -->
 </p>
-
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Node_auths 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -46,22 +32,13 @@
 
 ## :dart: About ##
 
-Describe your project
-
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+Projeto usado na aula de Authentication do curso de NodeJS da B7Web
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## :white_check_mark: Requirements ##
@@ -78,17 +55,18 @@ $ git clone https://github.com/alissoncavalcanticma/node_auths
 $ cd node_auths
 
 # Install dependencies
-$ yarn
+$ node i
 
 # Run the project
-$ yarn start
+$ npm run start-dev
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:4000>
 ```
+For registry of this project, see the [REGISTRY](registry.md) file.
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from GNU General Public License. For more details, see the [LICENSE](LICENSE.md) file.
 
 
 Made with :heart: by <a href="https://github.com/alissoncavalcanticma" target="_blank">Alisson Cavalcanti</a>
