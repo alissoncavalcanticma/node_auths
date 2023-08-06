@@ -1,11 +1,33 @@
+
 import { Request, Response, NextFunction } from "express";
+import { User } from "../src/models/User";
 
 export const Auth = {
-    private: (req: Request, res: Response, next: NextFunction) => {
+    private: async(req: Request, res: Response, next: NextFunction) => {
         // Fazer verificação de Auth
         //Inicia como false
         let success = false;
 
+        if(req.headers.authorization){
+            let hash: string = req.headers.authorization.substring(6);
+            let decoded: string = Buffer.from(hash, 'base64').toString();
+
+            let data: string[] = decoded.split(':');
+            if(data.length === 2){
+                let hasUser = await User.findOne({
+                    where:{
+                        email: data[0],
+                        password: data[1]
+                    }
+                });
+
+                if(hasUser){
+                    success = true;
+                }
+            }
+
+            console.log("Hash", hash);
+        }
 
 
         if(success){

@@ -1,15 +1,7 @@
 # Registry of node_auths project
 
-#### Obs: Copy node project base of node_base_api from suporteb7web/node_base_api
-## Multer library
->Documentation: https://www.npmjs.com/package/multer
-    
-### Install
-- `npm i multer`  
-    ###### Install types of Multer
-    - `npm i -D @types/multer`
+###### Obs: Copy node project base of node_base_api from suporteb7web/node_base_api
+##### Foi usado os sites abaixo para gerar as hashes base 64 e decodificar as mesmas:
 
-### Install Sharp
-- `npm i sharp`
-    ###### Install types of Sharp
-    - `npm i -D @types/sharp`
+>> https://www.base64encode.org/
+>> https://www.base64decode.org/
