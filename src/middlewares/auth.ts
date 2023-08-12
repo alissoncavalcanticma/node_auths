@@ -1,6 +1,9 @@
-
 import { Request, Response, NextFunction } from "express";
 import { User } from "../models/User";
+import JWT from 'jsonwebtoken';    
+import dotenv from 'dotenv';
+
+dotenv.config();;
 
 export const Auth = {
     private: async(req: Request, res: Response, next: NextFunction) => {
@@ -9,6 +12,27 @@ export const Auth = {
         let success = false;
 
         if(req.headers.authorization){
+            // JWT AUTHENTICATION
+            
+            const [authType, token] = req.headers.authorization.split(' ');
+            if(authType === "Bearer"){
+                try{
+                    const decoded = JWT.verify(
+                        token,
+                        process.env.JWT_PRIVATE_KEY as string
+                    );
+
+                    success = true;
+                }catch(err){
+                    res.json({msg: "Unauthorized"})
+                }
+                
+            }
+
+
+
+
+            /* BASIC AUTHENTICATION             
             let hash: string = req.headers.authorization.substring(6);
             let decoded: string = Buffer.from(hash, 'base64').toString();
 
@@ -26,7 +50,8 @@ export const Auth = {
                 }
             }
 
-            console.log("Hash", hash);
+            console.log("Hash", hash); 
+*/
         }
 
 
